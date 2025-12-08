@@ -1,6 +1,7 @@
 // BASICS OF C (printf, variables, data types)
 
 #include <stdio.h>
+#include <stdbool.h>
 // #include -> Preprocessor Directive
 // <stdio.h> -> Standard Input Output Header
 // C has no built in functions for printing or reading, Everything is external.
@@ -115,6 +116,14 @@ int main() {
     You write .c → preprocessor → compiler → machine code.
     This mental model will matter A LOT when debugging.
   */
+
+  bool isStudent = true;
+  if (isStudent) {
+    printf("You are a student");
+  }
+  else {
+    printf("You're not a student");
+  }
 
   return 0; // says: program ended successfully
 }
