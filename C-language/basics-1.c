@@ -1,4 +1,5 @@
-// BASICS OF C (printf, variables, data types)
+// BASICS OF C (printf, variables, data types, format specifiers
+// arithemetic operators)
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -124,6 +125,33 @@ int main() {
   else {
     printf("You're not a student");
   }
+  printf("\n");
+
+  // Width in format specifiers
+
+  int a = 1;
+  int b = 10;
+  int c = 100;
+
+  printf("%04d\n", a);
+  printf("%04d\n", b);
+  printf("%04d\n", c);
+
+  // Basic arithemetic operators
+
+  int z1 = 10;
+  /* float z2 = 3; */
+  int z2 = 3;
+  //int z3 = 0;
+  float z3 = 0;
+  /* z3 = z1 + z2; */
+  /* z3 = z1 - z2; */
+  /* z3 = z1 * z2; */
+  /* z3 = z1 / z2; */
+  z3 = z1 % z2;
+  // printf("%d\n", z3); // it will give 0 because w are using a integer format specifier and the result is a float.
+  printf("%f", z3);
+
 
   return 0; // says: program ended successfully
 }
