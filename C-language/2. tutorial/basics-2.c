@@ -37,17 +37,29 @@ int main() {
 
   printf("Enter your grade: ");
   scanf(" %c", &grade);
+  // Notice the space before %c
+  // That space tells scanf:
+  // Ignore whitespace and newline before reading character
+  // Without the space, it might end up reading '\n'
 
   getchar(); // new line character
-  printf("Enter your name: ");
+  /* printf("Enter your name: "); */
   // scanf("%s", &name); // It skips the last name as it found out a space just before the last name.
-  fgets(name, sizeof(name), stdin);
-  name[strlen(name) - 1] = '\0';
+  /* fgets(name, sizeof(name), stdin); */
+  /* name[strlen(name) - 1] = '\0'; */
 
+  printf("Enter your name: ");
+  fgets(name, sizeof(name), stdin);
+  name[strcspn(name, "\n")] = '\0';
+  /*
+  We used above line because, when we enter the string and press 'enter', it counts this enter as '/n'
+  new line character and creates a new line, so to remove that we used this line.
+  */
+
+  printf("full name: %s\n", name);
   printf("age: %d\n", age);
   printf("gpa: %.2f\n", gpa);
-  printf("grade :%c\n", grade);
-  printf("full name: %s\n", name);
+  printf("grade: %c\n", grade);
 
   return 0;
 }
