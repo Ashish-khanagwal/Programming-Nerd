@@ -52,5 +52,11 @@ int main() {
     printf("%d: %d\n", i, num[i]);
   }
 
+  int numb[] = {30, 31, 32, 33, 34, -1};
+  
+  for (int i = 0; numb[i] != -1; i++){
+    printf("%d\n", numb[i]);
+  }
+
   return 0;
 }
